@@ -10,7 +10,7 @@ from contextlib import closing
 DATABASE = '/tmp/flaskr.db'
 DEBUG = True
 SECRET_KEY = 'development key'
-USERNAME = 'admin'
+USERNAME = ['krizia', 'admin', 'peter']
 PASSWORD = 'default'
 
 # create our little application :)
@@ -56,7 +56,7 @@ def add_entry():
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != app.config['USERNAME']:
+        if request.form['username'] in app.config['USERNAME']:
             error = 'Invalid username'
         elif request.form['password'] != app.config['PASSWORD']:
             error = 'Invalid password'
