@@ -5,9 +5,9 @@ to run this, do
 
 2) (venv)$ python
 
-3) >>> from flaskr import init_db
+3) >>> from flaskr import db
 
-4) >>> init_db()
+4) >>> db.create_all()
 
 5) (venv)$ python flaskr.py
 
